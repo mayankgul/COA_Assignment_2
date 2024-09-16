@@ -8,14 +8,11 @@ lcm_result: .word 0
     .globl main
 
 main:
-
     lw      $t0, num1
     lw      $t1, num2
 
-
     move    $t2, $t0
     move    $t3, $t1
-
 
 gcd_loop:
     beq     $t1, $zero, gcd_done
@@ -26,17 +23,13 @@ gcd_loop:
     j       gcd_loop
 
 gcd_done:
-
     sw      $t0, gcd_result
-
 
     mul     $t5, $t2, $t3
     div     $t5, $t0
     mflo    $t6
 
-
     sw      $t6, lcm_result
-
 
     li      $v0, 10
     syscall
