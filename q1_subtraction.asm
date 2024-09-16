@@ -1,6 +1,6 @@
     .data
 num1:   .half   0x1234
-num2:   .half   0x00A2
+num2:   .half   0x5678
 result: .half   0
 
     .text
